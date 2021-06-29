@@ -1,0 +1,6 @@
+{
+	"text": ["ilike", "nilike","like", "nlike", "regexp", "eq", "neq"],
+	"numeric": ["between", "lt", "lte", "gt", "gte", "eq", "neq"],
+	"many": ["inq", "nin"]
+}
+

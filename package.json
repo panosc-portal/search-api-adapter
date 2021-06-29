@@ -1,0 +1,85 @@
+{
+   "name": "search-api-adapter",
+   "version": "1.0.0",
+   "main": "src/index.js",
+   "repository": "https://github.com/noobadmin/adapter.git",
+   "author": "Jiri Majer <juras.majer@gmail.com>",
+   "license": "MIT",
+   "dependencies": {
+      "debounce": "^1.2.1",
+      "ramda": "^0.27.1",
+      "unitmath": "^0.8.6"
+   },
+   "devDependencies": {
+      "@babel/core": "^7.13.15",
+      "@babel/preset-env": "^7.13.15",
+      "eslint": "^7.24.0",
+      "eslint-config-prettier": "^8.3.0",
+      "eslint-plugin-import": "^2.23.4",
+      "eslint-plugin-prettier": "^3.3.1",
+      "prettier": "^2.2.1"
+   },
+   "prettier": {
+      "trailingComma": "all",
+      "tabWidth": 2,
+      "semi": false,
+      "singleQuote": true,
+      "bracketSpacing": false,
+      "arrowParens": "always"
+   },
+   "eslintConfig": {
+      "parserOptions": {
+         "parser": "babel-eslint",
+         "sourceType": "module"
+      },
+      "env": {
+         "es2021": true
+      },
+      "extends": [
+         "prettier"
+      ],
+      "plugins": [
+         "prettier",
+         "import"
+      ],
+      "rules": {
+         "prettier/prettier": [
+            "error"
+         ],
+         "import/order": [
+            "error",
+            {
+               "groups": [
+                  "builtin",
+                  "external",
+                  "internal"
+               ],
+               "pathGroups": [
+                  {
+                     "pattern": "~/**",
+                     "group": "external",
+                     "position": "before"
+                  }
+               ],
+               "newlines-between": "always",
+               "alphabetize": {
+                  "order": "asc",
+                  "caseInsensitive": true
+               }
+            }
+         ]
+      }
+   },
+   "babel": {
+      "presets": [
+         [
+            "@babel/preset-env",
+            {
+               "targets": {
+                  "node": "current"
+               }
+            }
+         ]
+      ]
+   }
+}

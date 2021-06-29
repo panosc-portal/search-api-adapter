@@ -1,0 +1,96 @@
+[
+  {
+    "target":[
+      "parameters"
+    ],
+    "filters":[
+      {
+        "name":"wavelength",
+        "initialRange":[
+          200,
+          1100
+        ],
+        "initialUnit":"nm"
+      },
+      {
+        "name":"unitless number thing",
+        "initialRange":[
+          200,
+          1100
+        ]
+      },
+      {
+        "name":"photon_energy",
+        "initialRange":[
+          0,
+          1000
+        ],
+        "initialUnit":"eV"
+      },
+      {
+        "name":"chemical_formula"
+      },
+      {
+        "name":"Rainbow Generator",
+        "options":[
+          "Off",
+          "Half",
+          "Full",
+          "DOUBLE"
+        ]
+      }
+    ]
+  },
+  {
+    "target":[
+      "datasets",
+      "techniques"
+    ],
+    "filters":[
+      {
+        "value":"technique a"
+      },
+      {
+        "value":"technique b"
+      },
+      {
+        "value":"technique c"
+      }
+    ]
+  },
+  {
+    "filters":[
+      {
+        "name":"fullName"
+      }
+    ],
+    "target":[
+      "members",
+      "person"
+    ]
+  },
+  {
+    "filters":[
+      {
+        "name":"type",
+        "options":[
+          "proposal",
+          "experiment"
+        ]
+      },
+      {
+        "name":"title"
+      },
+      {
+        "name":"keywords",
+        "list":[
+          "keyword 1",
+          "keyword 2",
+          "keyword 3",
+          "keyword 4",
+          "keyword 5"
+        ]
+      }
+    ]
+  }
+]
