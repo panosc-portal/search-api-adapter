@@ -164,7 +164,7 @@ const initTreeOfFilterables = (filters = [], config = {}) => {
       assocRangeAccordingToUnit(unit),
       //refactor
       ifElse(
-        pipe(prop('operator', equals('between'))),
+        pipe(prop('operator'), equals('between')),
         converge(assoc('value'), [prop('range'), identity]),
         converge(assoc('value'), [pipe(prop('range'), head), identity]),
       ),
