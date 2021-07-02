@@ -162,8 +162,9 @@ const initTreeOfFilterables = (filters = [], config = {}) => {
       assoc('currentUnprefixedUnit', getCurrentUnprefixedUnit(unit)),
       assoc('currentUnitPrefix', getCurrentPrefix(unit)),
       assocRangeAccordingToUnit(unit),
+      //refactor
       ifElse(
-        equals(prop('operator'), always('between')),
+        pipe(prop('operator', equals('between'))),
         converge(assoc('value'), [prop('range'), identity]),
         converge(assoc('value'), [pipe(prop('range'), head), identity]),
       ),
