@@ -68,7 +68,7 @@ const enhancePagination = (config) =>
       either(has('pageSize'), has('page')),
       pipe(
         converge(assoc('limit'), [
-          converge(multiply, [propOr(25, 'pageSize'), propOr(1, 'page')]),
+          propOr(25, 'pageSize'),
           identity,
         ]),
         converge(assoc('skip'), [
